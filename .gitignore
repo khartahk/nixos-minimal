@@ -1,0 +1,10 @@
+*
+!.gitignore
+!LICENSE
+!README.md
+
+!etc
+etc/*
+!etc/nixos
+etc/nixos/*
+!etc/nixos/configuration.nix
