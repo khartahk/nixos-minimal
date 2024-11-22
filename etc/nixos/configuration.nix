@@ -15,7 +15,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.supportedFilesystems = [ "ext4" ];
   systemd.defaultUnit = "multi-user.target";
-
+  #nixpkgs.overlays = [ (import ./overlay.nix) ];
+  #boot.kernelPackages = pkgs.linuxPackages_minimal;
+  
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   

@@ -9,3 +9,4 @@ etc/*
 etc/nixos/*
 !etc/nixos/configuration.nix
 !etc/nixos/minimal.nix
+!etc/nixos/overlay.nix

@@ -34,4 +34,18 @@ with lib;
   xdg.icons.enable = mkDefault false;
   xdg.mime.enable = mkDefault false;
   xdg.sounds.enable = mkDefault false;
+
+  # ChatGPT suggestions
+  hardware.enableAllFirmware = false;   # Disable all firmware
+
+  nixpkgs.config = {
+    stripDebug = true;     # Strip debug symbols to save space
+    dontStrip = false;     # Ensure non-debug binaries are stripped
+    installLocale = false; # Do not install extra locales
+  };
+
+  nix.extraOptions = ''
+    keep-outputs = false
+    keep-derivations = false
+  '';
 }
